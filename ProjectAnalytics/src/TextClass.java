@@ -4,75 +4,63 @@ import java.util.Formatter;
 import java.util.FormatterClosedException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+import java.io.File;
+import java.lang.IllegalStateException;
 
 
 public class TextClass {
 
-	private Formatter output;
+	private Scanner input;
 	
 	public void openFile()
 	{
 		try
 		{
-			output = new Formatter("Patterns");
-		}
-		catch(SecurityException securityException)
-		{
-			System.err.println("This file can not be accessed.");
+			input = new Scanner(new File("Patterns.txt"));
 		}
 		catch(FileNotFoundException fileNotFoundException)
 		{
-			System.err.println("There is something wrong with this file");
+			System.err.println("This file cannot be opened.");
+			System.exit(1);
+		}
+		
+	}
+	
+	public void readRecords() 
+	{
+		PatternSet s = new PatternSet();
+		
+		System.out.println("Pattern Structure: ");
+		
+		
+		try 
+		{
+			while(input.hasNext())
+			{
+				s.setPatternStructure(input.next());
+				
+				System.out.println(s.getPatternStructure());
+			}
+		}
+		catch(NoSuchElementException elementException)
+		{
+			System.err.println("Improper formation of file.");
+			input.close();
+			System.exit(1);
+		}
+		catch(IllegalStateException stateException)
+		{
+			System.err.println("This file can not be read.");
 			System.exit(1);
 		}
 	}
 	
-	public void listPatterns()
-	{
-		PatternSet p = new PatternSet();
-		
-		Scanner input = new Scanner(System.in);
-		
-		System.out.println("This is a list of all the dataset needed to perform the intended operation");
-		System.out.println("The pattern no and the pattern structure and pattern type: ");
-		
-		while(input.hasNext())
-		{
-			try
-			{
-				p.setPatternNo(input.nextInt());
-				p.setPatternStructure(input.next());
-				p.setPatternType(input.next());
-				
-				if(p.getPatternNo() > 0)
-				{
-					output.format(p.getPatternNo() + " " + p.getPatternStructure() + " " + p.getPatternType() + "\n", null);
-				}
-				else
-				{
-					System.out.println("Pattern number must be greater than 0.");
-				}
-				
-			}
-			catch(FormatterClosedException formatterClosedException)
-			{
-				System.err.println("This cant be written to the file.");
-				return;
-			}
-			catch(NoSuchElementException elementException)
-			{
-				System.err.println("The input format is wrong");
-				input.nextLine();
-			}
-			
-			System.out.println("The pattern no and the pattern structure: ");
-		}
-	}
+
 	
 	public void CloseFile()
 	{
-		if(output!=null)
-			output.close();
+		if(input!=null)
+			input.close();
 	}
 	
 }

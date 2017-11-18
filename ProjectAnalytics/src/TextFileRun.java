@@ -6,7 +6,7 @@ public class TextFileRun {
 		TextClass a = new TextClass();
 		
 		a.openFile();
-		a.listPatterns();
+		a.readRecords();
 		a.CloseFile();
 
 	}
