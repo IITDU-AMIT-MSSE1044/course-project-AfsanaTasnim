@@ -1,12 +1,18 @@
 
-import java.awt.List;
+
+
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class TestStringsClass {
-
+	 ArrayList<String> afsana = new ArrayList<String>();
+	 
 	public void testTwo(){
 		
 	
@@ -35,6 +41,7 @@ public class TestStringsClass {
 			System.out.print(second[i] + " ");
 		}
 		System.out.println();
+		
 		
 		
 		
@@ -76,12 +83,141 @@ public class TestStringsClass {
 		System.out.println("Therefore, the similarity is: " + result);
 		
 		
-	
+
 		
 
 	}
+	
+	public void  fileReader() {
+		  String fileName = "C:/Users/Afsana/git/Initialization/ProjectAnalytics/Patterns.txt";
+	        String line = null;
+	       
+	        List<String> strList = new ArrayList<String>(); 
+	        
+	        try {
+	            // FileReader reads text files in the default encoding.
+	            FileReader fileReader = 
+	                new FileReader(fileName);
 
+	            // Always wrap FileReader in BufferedReader.
+	            BufferedReader bufferedReader = 
+	                new BufferedReader(fileReader);
+
+	            
+	            while((line = bufferedReader.readLine()) != null) {
+	            	afsana.add(line);
+	               // System.out.println(line);
+	            }  
+	            
+	           // System.out.println(afsana.get(5));
+	            //System.out.println(afsana.get(1));
+	            //String a1[] = {"a", "b", "c"};
+	            
+	           /* String w2[] = {afsana.get(1)};
+	            for(int z=0; z<w2.length; z++){
+	            	System.out.println(w2[z]);
+	            }*/
+	            
+            
+//	            System.out.println();
+	            
+	            for(int i=0; i<20; i++){
+	            	for(int j=i+1; j<20; j++){
+	            		
+	            		int size1 = afsana.get(i).toString().toCharArray().length;
+	            		
+	            		char temp1[] = new char[size1];
+	            		temp1 = afsana.get(i).toString().toCharArray();
+	            		
+	            		int size2 = afsana.get(i).toString().toCharArray().length;
+	            		
+	            		char temp2[] = new char[size2];
+	            		temp2 = afsana.get(j).toString().toCharArray();
+	            		
+	            		System.out.println(temp1[0]);
+	            		System.out.println(temp1[1]);
+	            		System.out.println(temp1[2]);
+	            		
+	            		
+//	            		String temp1[] = {afsana.get(i)};
+//	            		String w2[] = {afsana.get(j)};
+	            		
+	            		int temp = 0;
+	            		int pri = 0;
+	            		double result;
+	            		
+	            		
+	            		
+	            		String inter = ""+temp1[0]+""+temp1[1]+"";
+	            		String intertwo = ""+temp2[0]+""+temp2[1]+"";
+	            		
+	            		String first[] = {""+temp1[0]+"", ""+temp1[1]+"", ""+temp1[2]+"", inter, temp1[1]+""+temp1[2], inter+temp1[2]+""};
+	            		for(int k=0; k<first.length; k++)
+	            		{
+	            			System.out.print(first[k] + " ");
+	            		}
+	            		System.out.println();
+	            		
+	            		String second[] = {""+temp2[0]+"", ""+temp2[1]+"", ""+temp2[2]+"", ""+temp2[0]+""+temp2[1]+"", ""+temp2[1]+""+temp2[2]+"", intertwo+""+temp2[2]+""};
+	            		for(int l=0; l<second.length; l++)
+	            		{
+	            			System.out.print(second[l] + " ");
+	            		}
+	            		System.out.println();
+	            		
+	            		//Intersection
+	            		for(int q=0; q<first.length; q++){
+	            			for(int p=0; p<first.length; p++){
+	            				if((first[q].equals(second[p]))){
+	            					System.out.print(first[q] + " ");
+	            					System.out.println("Weight of it is: " + first[q].length());
+	            					temp = temp + first[q].length();
+	            				
+	            				}
+	            				
+	            				
+	            			}
+	            			
+	            			
+	            		}
+	            		
+	            		
+	            		
+	            		
+	            		
+	            		System.out.println("The sum of weight of intersection is: " + temp);
+	            		
+	            		System.out.println();
+	            		
+	            		Set union = new HashSet<Integer>();
+	            		for(int m=0; m<first.length; m++) union.add(first[m]);
+	            		for(int n=0; n<second.length; n++) union.add(second[n]);
+	            		Object[] ans = union.toArray();
+	            		for(int t=0; t<ans.length; t++){
+	            		    System.out.print(ans[t]+" ");
+	            		    pri = pri + ((String) ans[t]).length();
+	            		}
+	            		
+	            		System.out.println("Weight of union is: " + pri);
+	            		
+	            		result = (double)temp/pri;
+	            		
+	            		System.out.println("Therefore, the similarity is: " + result);
+	            		
+	            	}
+	            }
+
+	            // Always close files.
+	            bufferedReader.close();         
+	        }catch(Exception e){
+	        	e.printStackTrace();
+	        	
+	        	System.out.println("Errors");
+	        }
+	}
+	 public static void main(String[] args) {
+		TestStringsClass tSC = new TestStringsClass();
+		tSC.fileReader();
+	}
 
 }
-
-
