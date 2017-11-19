@@ -4,6 +4,7 @@
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -121,8 +122,23 @@ public class TestStringsClass {
             
 //	            System.out.println();
 	            
-	            for(int i=0; i<20; i++){
-	            	for(int j=i+1; j<20; j++){
+	            FileWriter f0 = new FileWriter("output.txt");
+	            String newLine = System.getProperty("line.separator");
+	            
+	            FileWriter f1 = new FileWriter("cluster1.txt");
+	            String newLineOfCluster = System.getProperty("line.separator");
+	            
+	            FileWriter f2 = new FileWriter("cluster2.txt");
+	            String newLineOfCluster2 = System.getProperty("line.separator");
+	            
+	            FileWriter f3 = new FileWriter("cluster3.txt");
+	            String newLineOfCluster3 = System.getProperty("line.separator");
+	            
+	            FileWriter f4 = new FileWriter("cluster4.txt");
+	            String newLineOfCluster4 = System.getProperty("line.separator");
+	            
+	            for(int i=0; i<1000; i++){
+	            	for(int j=i+1; j<1000; j++){
 	            		
 	            		int size1 = afsana.get(i).toString().toCharArray().length;
 	            		
@@ -150,6 +166,8 @@ public class TestStringsClass {
 	            		
 	            		String inter = ""+temp1[0]+""+temp1[1]+"";
 	            		String intertwo = ""+temp2[0]+""+temp2[1]+"";
+	            		String comp1 = ""+temp1[0]+""+temp1[1]+""+temp1[2]+"";
+	            		String comp2 = ""+temp2[0]+""+temp2[1]+""+temp2[2]+"";
 	            		
 	            		String first[] = {""+temp1[0]+"", ""+temp1[1]+"", ""+temp1[2]+"", inter, temp1[1]+""+temp1[2], inter+temp1[2]+""};
 	            		for(int k=0; k<first.length; k++)
@@ -204,8 +222,29 @@ public class TestStringsClass {
 	            		
 	            		System.out.println("Therefore, the similarity is: " + result);
 	            		
+	            		f0.write("Result " + comp1 + " " + comp2 + " " + result + newLine);
+	            		
+	            		if(result == 0.0){
+	            			f1.write(comp1 + " " + comp2 + " " + result + newLineOfCluster);
+	            		}
+	            		else if(result == 0.1111111111111111){
+	            			f2.write(comp1 + " " + comp2 + " " + result + newLineOfCluster2);
+	            		}
+	            		else if(result == 0.05263157894736842){
+	            			f3.write(comp1 + " " + comp2 + " " + result + newLineOfCluster3);
+	            		}
+	            		else if(result == 0.25){
+	            			f4.write(comp1 + " " + comp2 + " " + result + newLineOfCluster4);
+	            		}
+	            		
 	            	}
 	            }
+	            
+	            f0.close();
+	            f1.close();
+	            f2.close();
+	            f3.close();
+	            f4.close();
 
 	            // Always close files.
 	            bufferedReader.close();         
