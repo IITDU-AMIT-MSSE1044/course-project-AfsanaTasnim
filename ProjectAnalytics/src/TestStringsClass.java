@@ -24,6 +24,9 @@ public class TestStringsClass {
 		int temp = 0;
 		int pri = 0;
 		double result;
+		int a = 0;
+		int b = 0;
+		int c = 0;
 		
 		String inter = s1[0].concat(s1[1]);
 		String intertwo = s2[0].concat(s2[1]);
@@ -137,6 +140,18 @@ public class TestStringsClass {
 	            FileWriter f4 = new FileWriter("cluster4.txt");
 	            String newLineOfCluster4 = System.getProperty("line.separator");
 	            
+	            FileWriter b1 = new FileWriter("bide1.txt");
+	            String newLineOfBide1 = System.getProperty("line.separator");
+	            
+	            FileWriter b2 = new FileWriter("bide2.txt");
+	            String newLineOfBide2 = System.getProperty("line.separator");
+	            
+	            FileWriter b3 = new FileWriter("bide3.txt");
+	            String newLineOfBide3 = System.getProperty("line.separator");
+	            
+	            FileWriter b4 = new FileWriter("bide4.txt");
+	            String newLineOfBide4 = System.getProperty("line.separator");
+	            
 	            for(int i=0; i<1000; i++){
 	            	for(int j=i+1; j<1000; j++){
 	            		
@@ -226,15 +241,87 @@ public class TestStringsClass {
 	            		
 	            		if(result == 0.0){
 	            			f1.write(comp1 + " " + comp2 + " " + result + newLineOfCluster);
+	            			//Intersection
+		            		for(int q=0; q<3; q++){
+		            			for(int p=0; p<3; p++){
+		            				if((temp1[q] == (temp2[p]))){
+		            					System.out.print(temp1[q] + " ");
+		            					b1.write(temp1[q]);
+		            				}
+		            				
+		            				
+		            			}
+		            			
+		            			
+		            		}
+		            		b1.write(newLineOfBide1);
+		            		
+		            		
+		            
+		            		
+		            		System.out.println();
 	            		}
 	            		else if(result == 0.1111111111111111){
 	            			f2.write(comp1 + " " + comp2 + " " + result + newLineOfCluster2);
+	            			//Intersection
+		            		for(int q=0; q<3; q++){
+		            			for(int p=0; p<3; p++){
+		            				if((temp1[q] == (temp2[p]))){
+		            					System.out.print(temp1[q] + " ");
+		            					b2.write(temp1[q]);
+		            				}
+		            				
+		            				
+		            			}
+		            			
+		            			
+		            		}
+		            		b2.write(newLineOfBide2);
+		            		
+		            		
+		            
+		            		
+		            		System.out.println();
 	            		}
 	            		else if(result == 0.05263157894736842){
 	            			f3.write(comp1 + " " + comp2 + " " + result + newLineOfCluster3);
+	            			//Intersection
+		            		for(int q=0; q<3; q++){
+		            			for(int p=0; p<3; p++){
+		            				if((temp1[q] == (temp2[p]))){
+		            					System.out.print(temp1[q] + " ");
+		            					b3.write(temp1[q]);
+		            				}
+		            				
+		            				
+		            			}
+		            			
+		            			
+		            		}
+		            		b3.write(newLineOfBide3);
+		            		
 	            		}
 	            		else if(result == 0.25){
 	            			f4.write(comp1 + " " + comp2 + " " + result + newLineOfCluster4);
+	            			//Intersection
+		            		for(int q=0; q<3; q++){
+		            			for(int p=0; p<3; p++){
+		            				if((temp1[q] == (temp2[p]))){
+		            					System.out.print(temp1[q] + " ");
+		            					b4.write(temp1[q]);
+		            				}
+		            				
+		            				
+		            			}
+		            			
+		            			
+		            		}
+		            		b4.write(newLineOfBide4);
+		            		
+		            		
+		            
+		            		
+		            		System.out.println();
 	            		}
 	            		
 	            	}
