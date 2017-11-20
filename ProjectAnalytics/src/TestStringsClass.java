@@ -13,6 +13,8 @@ import java.util.TreeSet;
 
 public class TestStringsClass {
 	 ArrayList<String> afsana = new ArrayList<String>();
+	 ArrayList<String> tasnim = new ArrayList<String>();
+	 ArrayList<String> mimi = new ArrayList<String>();
 	 
 	public void testTwo(){
 		
@@ -341,9 +343,300 @@ public class TestStringsClass {
 	        	System.out.println("Errors");
 	        }
 	}
+	
+	
+	public void  fileReaderTwo() {
+		  String fileName = "C:/Users/Afsana/git/Initialization/ProjectAnalytics/bide2.txt";
+	        String line = null;
+	       
+	        List<String> strList = new ArrayList<String>(); 
+	        
+	        try {
+	            // FileReader reads text files in the default encoding.
+	            FileReader fileReader = 
+	                new FileReader(fileName);
+
+	            // Always wrap FileReader in BufferedReader.
+	            BufferedReader bufferedReader = 
+	                new BufferedReader(fileReader);
+
+	            
+	            while((line = bufferedReader.readLine()) != null) {
+	            	tasnim.add(line);
+	               // System.out.println(line);
+	            }  
+	            
+	            FileWriter g0 = new FileWriter("Watch.txt");
+	            String newLineWatch = System.getProperty("line.separator");
+	            
+	            FileWriter g2 = new FileWriter("FinalCluster2.txt");
+	            String newLineOfFinalCluster2 = System.getProperty("line.separator");
+	            
+	            FileWriter g4 = new FileWriter("FinalCluster4.txt");
+	            String newLineOfFinalCluster4 = System.getProperty("line.separator");
+	            
+	            
+	            for(int i=0; i<1000; i++){
+	            	for(int j=i+1; j<1000; j++){
+	            		
+	            		int size1 = tasnim.get(i).toString().toCharArray().length;
+	            		
+	            		char temp1[] = new char[size1];
+	            		temp1 = tasnim.get(i).toString().toCharArray();
+	            		
+	            		int size2 = tasnim.get(i).toString().toCharArray().length;
+	            		
+	            		char temp2[] = new char[size2];
+	            		temp2 = tasnim.get(j).toString().toCharArray();
+	            		
+	            		System.out.println(temp1[0]);
+	            		System.out.println(temp1[1]);
+
+	            		
+	            		
+
+	            		
+	            		int temp = 0;
+	            		int pri = 0;
+	            		double result;
+	            		
+	            		
+	            		
+	            		
+	            		String comp1 = ""+temp1[0]+""+temp1[1]+"";
+	            		String comp2 = ""+temp2[0]+""+temp2[1]+"";
+	            		
+	            		String first[] = {""+temp1[0]+"", ""+temp1[1]+"", ""+temp1[0]+""+temp1[1]+""};
+	            		for(int k=0; k<first.length; k++)
+	            		{
+	            			System.out.print(first[k] + " ");
+	            		}
+	            		System.out.println();
+	            		
+	            		String second[] = {""+temp2[0]+"", ""+temp2[1]+"", ""+temp2[0]+""+temp2[1]+""};
+	            		for(int l=0; l<second.length; l++)
+	            		{
+	            			System.out.print(second[l] + " ");
+	            		}
+	            		System.out.println();
+	            		
+	            		//Intersection
+	            		for(int q=0; q<first.length; q++){
+	            			for(int p=0; p<first.length; p++){
+	            				if((first[q].equals(second[p]))){
+	            					System.out.print(first[q] + " ");
+	            					System.out.println("Weight of it is: " + first[q].length());
+	            					temp = temp + first[q].length();
+	            				
+	            				}
+	            				
+	            				
+	            			}
+	            			
+	            			
+	            		}
+	            		
+	            		
+	            		
+	            		
+	            		
+	            		System.out.println("The sum of weight of intersection is: " + temp);
+	            		
+	            		System.out.println();
+	            		
+	            		Set union = new HashSet<Integer>();
+	            		for(int m=0; m<first.length; m++) union.add(first[m]);
+	            		for(int n=0; n<second.length; n++) union.add(second[n]);
+	            		Object[] ans = union.toArray();
+	            		for(int t=0; t<ans.length; t++){
+	            		    System.out.print(ans[t]+" ");
+	            		    pri = pri + ((String) ans[t]).length();
+	            		}
+	            		
+	            		System.out.println("Weight of union is: " + pri);
+	            		
+	            		result = (double)temp/pri;
+	            		
+	            		System.out.println("Therefore, the similarity is: " + result);
+	            		
+	            		g0.write("Result " + comp1 + " " + comp2 + " " + result + newLineWatch);
+	            		
+	            		
+	            		
+	            		if(result == 0.14285714285714285){
+	            			g2.write(comp1 + " " + comp2 + " " + result + newLineOfFinalCluster2);
+	            			
+	            		}
+	            	
+	            		else if(result == 0.3333333333333333){
+	            			g4.write(comp1 + " " + comp2 + " " + result + newLineOfFinalCluster4);
+	            		}
+	            		
+	            	}
+	            }
+	            
+	           
+	            g2.close();
+	            g4.close();
+
+	            // Always close files.
+	            bufferedReader.close();         
+	        }catch(Exception e){
+	        	e.printStackTrace();
+	        	
+	        	System.out.println("Errors");
+	        }
+	}
+	
+	public void  fileReaderFour() {
+		  String fileName = "C:/Users/Afsana/git/Initialization/ProjectAnalytics/bide4.txt";
+	        String line = null;
+	       
+	        List<String> strList = new ArrayList<String>(); 
+	        
+	        try {
+	            // FileReader reads text files in the default encoding.
+	            FileReader fileReader = 
+	                new FileReader(fileName);
+
+	            // Always wrap FileReader in BufferedReader.
+	            BufferedReader bufferedReader = 
+	                new BufferedReader(fileReader);
+
+	            
+	            while((line = bufferedReader.readLine()) != null) {
+	            	mimi.add(line);
+	               // System.out.println(line);
+	            }  
+	            
+	            FileWriter h0 = new FileWriter("View.txt");
+	            String newLineView = System.getProperty("line.separator");
+	            
+	            FileWriter h2 = new FileWriter("FinalCluster2a.txt");
+	            String newLineOfFinalCluster2a = System.getProperty("line.separator");
+	            
+	            FileWriter h4 = new FileWriter("FinalCluster4a.txt");
+	            String newLineOfFinalCluster4a = System.getProperty("line.separator");
+	            
+	            
+	            for(int i=0; i<1000; i++){
+	            	for(int j=i+1; j<1000; j++){
+	            		
+	            		int size1 = mimi.get(i).toString().toCharArray().length;
+	            		
+	            		char temp1[] = new char[size1];
+	            		temp1 = mimi.get(i).toString().toCharArray();
+	            		
+	            		int size2 = mimi.get(i).toString().toCharArray().length;
+	            		
+	            		char temp2[] = new char[size2];
+	            		temp2 = mimi.get(j).toString().toCharArray();
+	            		
+	            		System.out.println(temp1[0]);
+	            		System.out.println(temp1[1]);
+
+	            		
+	            		
+
+	            		
+	            		int temp = 0;
+	            		int pri = 0;
+	            		double result;
+	            		
+	            		
+	            		
+	            		
+	            		String comp1 = ""+temp1[0]+""+temp1[1]+"";
+	            		String comp2 = ""+temp2[0]+""+temp2[1]+"";
+	            		
+	            		String first[] = {""+temp1[0]+"", ""+temp1[1]+"", ""+temp1[0]+""+temp1[1]+""};
+	            		for(int k=0; k<first.length; k++)
+	            		{
+	            			System.out.print(first[k] + " ");
+	            		}
+	            		System.out.println();
+	            		
+	            		String second[] = {""+temp2[0]+"", ""+temp2[1]+"", ""+temp2[0]+""+temp2[1]+""};
+	            		for(int l=0; l<second.length; l++)
+	            		{
+	            			System.out.print(second[l] + " ");
+	            		}
+	            		System.out.println();
+	            		
+	            		//Intersection
+	            		for(int q=0; q<first.length; q++){
+	            			for(int p=0; p<first.length; p++){
+	            				if((first[q].equals(second[p]))){
+	            					System.out.print(first[q] + " ");
+	            					System.out.println("Weight of it is: " + first[q].length());
+	            					temp = temp + first[q].length();
+	            				
+	            				}
+	            				
+	            				
+	            			}
+	            			
+	            			
+	            		}
+	            		
+	            		
+	            		
+	            		
+	            		
+	            		System.out.println("The sum of weight of intersection is: " + temp);
+	            		
+	            		System.out.println();
+	            		
+	            		Set union = new HashSet<Integer>();
+	            		for(int m=0; m<first.length; m++) union.add(first[m]);
+	            		for(int n=0; n<second.length; n++) union.add(second[n]);
+	            		Object[] ans = union.toArray();
+	            		for(int t=0; t<ans.length; t++){
+	            		    System.out.print(ans[t]+" ");
+	            		    pri = pri + ((String) ans[t]).length();
+	            		}
+	            		
+	            		System.out.println("Weight of union is: " + pri);
+	            		
+	            		result = (double)temp/pri;
+	            		
+	            		System.out.println("Therefore, the similarity is: " + result);
+	            		
+	            		h0.write("Result " + comp1 + " " + comp2 + " " + result + newLineView);
+	            		
+	            		
+	            		
+	            		if(result == 0.14285714285714285){
+	            			h2.write(comp1 + " " + comp2 + " " + result + newLineOfFinalCluster2a);
+	            			
+	            		}
+	            	
+	            		else if(result == 1.0){
+	            			h4.write(comp1 + " " + comp2 + " " + result + newLineOfFinalCluster4a);
+	            		}
+	            		
+	            	}
+	            }
+	            
+	           
+	            h2.close();
+	            h4.close();
+
+	            // Always close files.
+	            bufferedReader.close();         
+	        }catch(Exception e){
+	        	e.printStackTrace();
+	        	
+	        	System.out.println("Errors");
+	        }
+	}
+	
+	
 	 public static void main(String[] args) {
 		TestStringsClass tSC = new TestStringsClass();
 		tSC.fileReader();
+		tSC.fileReaderTwo();
+		tSC.fileReaderFour();
 	}
 
 }
