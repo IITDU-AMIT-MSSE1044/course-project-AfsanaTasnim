@@ -1,5 +1,6 @@
 ## Software Analytics Course Project
-# "Mining Succinct and High-Coverage API Usage Patterns from Source Code"
+# "Mining Succinct and High-Coverage API Usage Patterns from Source Code" - Wang, Jue, et al. Proceedings of the 10th Working Conference on Mining Software Repositories. IEEE Press, 2013.
+
 Readmefile-Created By-Afsana Tasnim
 
 Date: 20th November, 2017.
