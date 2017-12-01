@@ -23,11 +23,11 @@ the required usage patterns.
 
 -- Details on data I worked on:
 The dataset was generated using permutation combination. For this the different letters of english alphabet were chosen. The obtained 
-result was the dataset for this work.
+result was the dataset for this work. Here, Patterns.txt is the input dataset for the project. 
 
 -- Detailed Instructions on how to use it:
 Using this project required installed Java on the computer. The project is to be pulled at first from the github. Then all the /java files
-will appear and also the pattern.txt file will be visible. When the class called TestStringsClass is run, the results will be given in 
+will appear and also the Patterns.txt file will be visible. When the class called TestStringsClass is run, the results will be given in 
 files.The outputs will be bide1.txt, bide2.txt, bide3.txt, bide4.txt, cluster1.txt, cluster2.txt, cluster3.txt, cluster4.txt, 
 FinalCluster2.txt, FinalCluster2a.txt, FinalCluster4.txt, FinalCluster4a.txt, output.txt, Patterns.txt, View.txt and Watch.txt. 
 
