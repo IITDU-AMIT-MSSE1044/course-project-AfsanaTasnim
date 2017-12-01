@@ -81,11 +81,11 @@ This is how the similarity of two sequences is calculated.
 
 Then the first level of clustering is done where a threshold value is used to cluster the sequences. Once the cluster is formed, the BIDE algoritm is then applied. 
 
-###### Mining Frequent Closed Sequences:
+### Mining Frequent Closed Sequences:
 
 I have applied the BIDE algorithm in order to identify the frequent API usages. Through this, the frequent closed call sequences are mined. I applied BIDE to each cluster. Then, frequent closed sequences were produced for the cluster. Let's see an example from the paper to understand this. Let, there are three sequences ab, abc, abd in a cluster and the min_sup is 0.5. In this case, BIDE will produce the frequent closed sequences ab. There are sufficient reasons for which BIDE is used instead of any other algorithm. For example, in the given case, if another frequent sequence miner such as Bitmap(the sequence mining algorithm used in MAPO) was used, the returns would be a, b and ab. But in this case, it is very clear that since ab is frequent so a and b are also frequent. Therefore, lising a and b separately is not required. The idea here is that using BIDE solves this problem because if there exists subsequences with the same support, then BIDE returns only the longest sequences.  This algorithm finds out the longest matched pattern in the sequences. 
 
-###### Clustering Frequent Closed Sequences
+### Clustering Frequent Closed Sequences
 
 Then, I performed clustering again. This is the final step. In this step, the SeqSim value is again calculated and once again, by using a threshold value, cluster is formed. This final level of clustering gives
 the required usage patterns. 
