@@ -113,7 +113,7 @@ The project will be obtained with the name "ProjectAnalysis". Under the default 
 1. Double click on "Project Analysis".
 2. Double click on src.
 3. Then double click on the default package.
-4. Now right click on TestStringsClass.
+4. Now right click on "TestStringsClass".
 5. Then select Run As.
 6. Now select Java Application.
 
@@ -128,6 +128,9 @@ FinalCluster2.txt, FinalCluster2a.txt, FinalCluster4.txt, FinalCluster4a.txt, ou
 
 ## 5. Tradeoffs I made while doing the project compared to the base project:
 The main tradeoff made while doing the project compared to the base project was while generating the dataset. I had to choose among values that were random to find out all possible combination. Sequences with three letters were choosen as the input dataset. This work can also be done with sequences containing more letters. This stays as my future work. 
+
+## 6. References:
+Wang, Jue, et al. "Mining succinct and high-coverage API usage patterns from source code." Proceedings of the 10th Working Conference on Mining Software Repositories. IEEE Press, 2013.
 
 -Afsana Tasnim
 
