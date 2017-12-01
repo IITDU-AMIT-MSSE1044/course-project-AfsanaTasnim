@@ -3,7 +3,7 @@ course-project-AfsanaTasnim created by GitHub Classroom
 Date: 20th November, 2017
 "Mining Succinct and High-Coverage API Usage Patterns from Source Code"
 Readmefile-Created By-Afsana Tasnim
-
+#Afsana Tasnim
 
 -- What the base project did:
 I have worked on the given paper which mines API usage patters. The paper talks about the usage patterns being succinct and providing high-
