@@ -25,13 +25,27 @@ G(s1) = {a, b, c, ab, bc, abc}
 
 and G(s2) = {c, a, b, ca, ab, cab}. 
 
-Now, the intersection = {a, b, c, ab} and 
+Now, the intersection = {a, b, c, ab} 
 
-union, Gu = G(s1) U G(s2) = {a, b, c, ab, bc, ca, abc, cab}. 
+and union, Gu = G(s1) U G(s2) = {a, b, c, ab, bc, ca, abc, cab}. 
 
 Now, we will calculate the weights for the intersection: 
 
-Weight(a) = 1, Weight(b) = 1, Weight(c) = 1, Weight(ab) = 2. So, the summation of the weights upto i-th member will be 1+1+1+2 = 5 And then we will calculate the weights for Gu = G(s1) U G(s2. Weight(a) = 1, Weight(b) = 1, Weight(c) = 1, Weight(ab) = 2, Weight(bc) = 2, Weight(ca) = 2, Weight(abc) = 3, Weight(cab) = 3. So, the summation of the weights upto i-th member will be 1+1+1+2+2+2+3+3 = 15. So, according to the equation, SeqSim(s1,s2) = = 5/15 = 0.33. Therefore, the required similarity of the sequences s1 and s2 is 0.33. This is how the similarity of two sequences is calculated. 
+Weight(a) = 1, Weight(b) = 1, Weight(c) = 1, Weight(ab) = 2. 
+
+So, the summation of the weights upto i-th member will be 1+1+1+2 = 5.
+
+And then we will calculate the weights for Gu = G(s1) U G(s2. 
+
+Weight(a) = 1, Weight(b) = 1, Weight(c) = 1, Weight(ab) = 2, Weight(bc) = 2, Weight(ca) = 2, Weight(abc) = 3, Weight(cab) = 3. 
+
+So, the summation of the weights upto i-th member will be 1+1+1+2+2+2+3+3 = 15. 
+
+So, according to the equation, SeqSim(s1,s2) = = 5/15 = 0.33. 
+
+Therefore, the required similarity of the sequences s1 and s2 is 0.33. This is how the similarity of two sequences is calculated. 
+
+
 Then the first level of clustering is done where a threshold value is used to cluster the sequences. Once the cluster is formed, the BIDE algoritm is then applied. I have applied the BIDE algorithm in order to identify the frequent API usages. Through this, the frequent closed call sequences are mined. I applied BIDE to each cluster. Then, frequent closed sequences were produced for the cluster. Let's see an example from the paper to understand this. Let, there are three sequences ab, abc, abd in a cluster and the min_sup is 0.5. In this case, BIDE will produce the frequent closed sequences ab. There are sufficient reasons for which BIDE is used instead of any other algorithm. For example, in the given case, if another frequent sequence miner such as Bitmap(the sequence mining algorithm used in MAPO) was used, the returns would be a, b and ab. But in this case, it is very clear that since ab is frequent so a and b are also frequent. Therefore, lising a and b separately is not required. The idea here is that using BIDE solves this problem because if there exists subsequences with the same support, then BIDE returns only the longest sequences.  This algorithm finds out the longest matched pattern in the sequences. Then, I performed clustering again. This is the final step. In this step, the SeqSim value is again calculated and once again, by using a threshold value, cluster is formed. This final level of clustering gives
 the required usage patterns. 
 
