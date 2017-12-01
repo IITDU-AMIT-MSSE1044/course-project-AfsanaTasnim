@@ -104,11 +104,18 @@ Using this project requires installed Eclipse on the computer. The project is to
 
 git clone https://github.com/IITDU-AMIT-MSSE1044/course-project-AfsanaTasnim
 
-The project will be obtained with the name "ProjectAnalysis". Under the default package, the classes will appear. All the .java files will appear.
-
 #### 4.1.2 Import the repository as a Java Project.
 
+The project will be obtained with the name "ProjectAnalysis". Under the default package, the classes will appear. All the .java files will appear.
+
 ### 4.2 Run the Application:
+
+*1. Double click on "Project Analysis".
+*2. Double click on src.
+*3. Then double click on the default package.
+*4. Now right click on TestStringsClass.
+*5. Then select Run As.
+*6. Now select Java Application.
 
 ### 4.3 Input:
 
