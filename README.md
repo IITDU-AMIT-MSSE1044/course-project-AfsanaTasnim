@@ -27,7 +27,7 @@ result was the dataset for this work. Here, Patterns.txt is the input dataset fo
 
 -- Detailed Instructions on how to use it:
 Using this project requires installed Eclipse on the computer. The project is to be pulled at first from the github. The project will be obtained with the name "ProjectAnalysis". Under the default package, the classes will appear. All the .java files will appear and also the Patterns.txt(input file) file will be visible. When the class called TestStringsClass is run, the results will be given in files. The outputs will be bide1.txt, bide2.txt, bide3.txt, bide4.txt, cluster1.txt, cluster2.txt, cluster3.txt, cluster4.txt, 
-FinalCluster2.txt, FinalCluster2a.txt, FinalCluster4.txt, FinalCluster4a.txt, output.txt, Patterns.txt, View.txt and Watch.txt. There it is, the final result of the project. 
+FinalCluster2.txt, FinalCluster2a.txt, FinalCluster4.txt, FinalCluster4a.txt, output.txt, Patterns.txt, View.txt and Watch.txt. There it is, the final results of the project. 
 
 -- Tradeoffs I made while doing the project compared to the base project:
 The main tradeoff made while doing the project compared to the base project was while generating the dataset. I had to choose among values that were random to find out all possible combination. Sequences with three letters were choosen as the input dataset. This work can also be done with sequences containing more letters. This stays as my future work. 
