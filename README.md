@@ -4,7 +4,7 @@ Readmefile-Created By-Afsana Tasnim,
 Date: 20th November, 2017.
 
 
-##What the base project did:
+## What the base project did:
 I have worked on the given paper which mines API usage patters. The paper talks about the usage patterns being succinct and providing high-
 coverage. Their proposed approach is Usage Pattern Miner(UP-Miner). The approach is composed of two step clustering and the application
 of BIDE algorithm. The first level of clustering is done based on the similarity of the sequences. For this the paper used a technique 
