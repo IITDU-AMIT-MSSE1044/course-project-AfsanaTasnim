@@ -95,7 +95,28 @@ The dataset was generated using permutation combination. For this the different 
 result was the dataset for this work. Here, Patterns.txt is the input dataset for the project. After the first clustering, the outputs are cluster1.txt, cluster2.txt, cluster3.txt and cluster4.txt. Then, BIDE algorithm is applied on these clusters. After the application of BIDE algorithm, the outputs are bide1.txt, bide2.txt, bide3.txt and bide4.txt. Then the second clustering is done. This clustering produces the final outputs namely FinalCluster2.txt, FinalCluster4.txt and FinalCluster2a.txt, FinalCluster4a.txt. 
 
 ## 4. Detailed Instructions on how to use it:
-Using this project requires installed Eclipse on the computer. The project is to be pulled at first from the github. The project will be obtained with the name "ProjectAnalysis". Under the default package, the classes will appear. All the .java files will appear and also the Patterns.txt(input file) file will be visible. When the class called TestStringsClass is run, the results will be given in files. The outputs will be bide1.txt, bide2.txt, bide3.txt, bide4.txt, cluster1.txt, cluster2.txt, cluster3.txt, cluster4.txt, 
+
+### 4.1 Create a Java Project
+
+#### 4.1.1 Clone the repository:
+
+Using this project requires installed Eclipse on the computer. The project is to be pulled at first from the github.
+
+git clone https://github.com/IITDU-AMIT-MSSE1044/course-project-AfsanaTasnim
+
+The project will be obtained with the name "ProjectAnalysis". Under the default package, the classes will appear. All the .java files will appear.
+
+#### 4.1.2 Import the repository as a Java Project.
+
+### 4.2 Run the Application:
+
+### 4.3 Input:
+
+The Patterns.txt(input file) file will be visible. When the class called TestStringsClass is run, the results will be given in files. 
+
+### 4.4 Output:
+
+The outputs will be bide1.txt, bide2.txt, bide3.txt, bide4.txt, cluster1.txt, cluster2.txt, cluster3.txt, cluster4.txt, 
 FinalCluster2.txt, FinalCluster2a.txt, FinalCluster4.txt, FinalCluster4a.txt, output.txt, Patterns.txt, View.txt and Watch.txt. There it is, the final results of the project. 
 
 ## 5. Tradeoffs I made while doing the project compared to the base project:
