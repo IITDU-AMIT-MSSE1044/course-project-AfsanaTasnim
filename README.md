@@ -1,6 +1,7 @@
 ## Software Analytics Course Project
 # "Mining Succinct and High-Coverage API Usage Patterns from Source Code"
-Readmefile-Created By-Afsana Tasnim,
+Readmefile-Created By-Afsana Tasnim
+
 Date: 20th November, 2017.
 
 
@@ -12,7 +13,7 @@ called SeqSim. The SeqSim technique finds out the similarity of the sequences. T
 SeqSim value, the first level of clustering is done. Next approach is the application of BIDE algorithm. The last step is the application
 of clustering once again to find out the required usage patterns. 
 
-## What I did:
+## What I did
 I have done the project according to the paper. I have applied two step clustering along with BIDE algorithm. At first two sets are formed from the two sequences. Then, the intersection and union of the two sets are determined. After
 that, the weights of the intersection and union sets are determined. Then, by dividing the weight of the intersection by the weight of 
 union, the similarity valus is calculated. This is done for all the strings of the entire dataset. Let us take an example. Let, given,
@@ -32,4 +33,5 @@ FinalCluster2.txt, FinalCluster2a.txt, FinalCluster4.txt, FinalCluster4a.txt, ou
 The main tradeoff made while doing the project compared to the base project was while generating the dataset. I had to choose among values that were random to find out all possible combination. Sequences with three letters were choosen as the input dataset. This work can also be done with sequences containing more letters. This stays as my future work. 
 
 -Afsana Tasnim
+
 MSSE0523
