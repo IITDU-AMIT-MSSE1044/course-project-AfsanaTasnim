@@ -17,7 +17,7 @@ of clustering once again to find out the required usage patterns.
 ## What I did
 I have done the project according to the paper. I have applied two step clustering along with BIDE algorithm. 
 
-###### Mining Frequent API Usage Patterns
+#### Mining Frequent API Usage Patterns
 
 At first two sets are formed from the two sequences. Then, the intersection and union of the two sets are determined. After
 that, the weights of the intersection and union sets are determined. Then, by dividing the weight of the intersection by the weight of 
