@@ -48,7 +48,7 @@ Weight(ab) = 2.
 
 So, the summation of the weights upto i-th member will be 1+1+1+2 = 5.
 
-And then we will calculate the weights for Gu = G(s1) U G(s2. 
+And then we will calculate the weights for Gu = G(s1) U G(s2). 
 
 Weight(a) = 1,
 
