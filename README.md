@@ -1,6 +1,6 @@
 ## Software Analytics Course Project
 # "Mining Succinct and High-Coverage API Usage Patterns from Source Code"
-Readmefile-Created By-Afsana Tasnim.
+Readmefile-Created By-Afsana Tasnim,
 Date: 20th November, 2017.
 
 
